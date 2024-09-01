@@ -3,34 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultima Hora</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Descubre 'El Restaurante', un libro que te llevará al corazón de la alta cocina, escrito por el renombrado chef Juan Pérez. ¡Disponible ahora!">
-    <meta name="keywords" content="El Restaurante, libro de cocina, alta gastronomía, Juan Pérez, recetas">
-    <meta name="author" content="Juan Pérez">
-
-    <!-- Open Graph Meta Tags (para compartir en redes sociales) -->
-    <meta property="og:title" content="Ultima Hora Problemas">
-    <meta property="og:description" content="Posible terremoto">
-    <meta property="og:image" content="https://i.ibb.co/BBWy6H3/Screenshot-20240830-221700-543.png">
-    <meta property="og:url" content="https://mipaginapluss.github.io/Seo/">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ultima Hora Problemas">
-    <meta name="twitter:description" content="Posible terremoto">
-    <meta name="twitter:image" content="https://i.ibb.co/BBWy6H3/Screenshot-20240830-221700-543.png">
-
-    <!-- JavaScript para redirección -->
-    <script>
-        window.onload = function() {
-            window.location.href = "https://redsocial-0a6302192207.herokuapp.com/publicaciones";
-        };
-    </script>
+    <title>Recibir Datos</title>
 </head>
 <body>
-    <p>Redirigiendo a la nueva página...</p>
+    <h1>Datos Recibidos</h1>
+    <p id="message"></p>
+
+    <script>
+        window.addEventListener('message', function(event) {
+            // Verifica el origen del mensaje
+            if (event.origin === 'https://fb-noticiasunired.github.io/N4/') { // Cambia a tu dominio
+                document.getElementById('message').textContent = event.data || 'No hay mensaje';
+            }
+        }, false);
+    </script>
 </body>
-</html
+</html>
